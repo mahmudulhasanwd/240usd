@@ -66,6 +66,17 @@
         })
         $('#pre').click(function() {
             owl.trigger('prev.owl.carousel', [300]);
+        });
+
+
+        // code for responsive menu
+        $(".sm-bar").click(function (){
+            $(".main-menu").slideToggle();
+        });
+
+        $(".main-menu ul li a").click(function (){
+            $(this).next("ul#dropdown").slideToggle();
+            return false;
         })
 
 
