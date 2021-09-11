@@ -69,12 +69,43 @@
         });
 
 
+        // code for about client slider
+
+        $('.about-client-feedback-slider').owlCarousel({
+            loop: true,
+            margin: 20,
+            center: false,
+            nav: false,
+            dots: true,
+            autoplay: true,
+            autoplayTimeout: 2000,
+            responsiveClass: true,
+            responsiveRefreshRate: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                768: {
+                    items: 1
+                },
+                960: {
+                    items: 3
+                },
+                1200: {
+                    items: 4
+                },
+                1920: {
+                    items: 4
+                }
+            }
+        });
+
         // code for responsive menu
-        $(".sm-bar").click(function (){
+        $(".sm-bar").click(function() {
             $(".main-menu").slideToggle();
         });
 
-        $(".main-menu ul li a").click(function (){
+        $(".main-menu ul li a").click(function() {
             $(this).next("ul#dropdown").slideToggle();
             return false;
         })
